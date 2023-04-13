@@ -1,7 +1,5 @@
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -16,41 +14,96 @@
 .body{
     height: 100vh;
     display: inline-flex;
+    margin: 0;
+    padding: 0;
+    
 }
 .main{
 
     flex:1;
 }
 /* personal website page */
-.name{
-    color:white;
-    font-size: 3rem;
-}    
+header{
+    margin: 0;
+    padding: 0;
+    flex:0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.header-name{
+    font-size: 2.5rem;
+    margin:.5rem;
+    color: white;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li:hover{
+    text-decoration: underline;
+}
 
-#header {
-    display: inline-flex;
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding:3rem;
+    font-size: 1.5rem;
+}
+.toggle-button{
+    position: fixed;
+    top: 1.4rem;
+    right:1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height:30px;
+    display: none;
+    
+}
+.toggle-button .bar{
+    height: 4px;
     width: 100%;
-    justify-content: space-evenly;
- 
+    background-color: white;
+    border-radius: 10px;
+}
+@media(max-width:900px){
+    .toggle-button{
+        display:flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+        display:flex;
+    }
+    
 }
 
-#header-left {
-    float: left ;
-    padding-left: 1em;
-}
 
-#header-right {
-    margin-left: 50%;
-    float: right;
-    margin-top: 1.6em;
-
-}
-#header-right a {
-    padding-right: 3em;
-    color:white;
-    font-size: 2rem;
-
-}
 
 #firstblock{
     width: 100%;
