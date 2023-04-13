@@ -1,3 +1,6 @@
-const message="Hello World";
-console.log("Hello World");
+const toggleButton= document.getElementsByClassName("toggle-button")[0]
+const navbarLinks= document.getElementsByClassName("navbar-links")[0]
 
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})
